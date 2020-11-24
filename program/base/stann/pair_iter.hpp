@@ -156,7 +156,7 @@ public:
     return iter1==a.iter1;
   };
   
-  bool operator!=(pair_iter<Iter1, Iter2> a)
+  bool operator!=(pair_iter<Iter1, Iter2> a)  const
   {
     //cout << "operator!=" << endl;
     return iter1 != a.iter1;
@@ -187,7 +187,7 @@ public:
   //--------------------------------------
   //Dereference Operator
   //--------------------------------------
-  value_type operator*()
+  value_type operator*()  const
   {
     //cout << "operator*" << endl;
     return value_type(iter1, iter2);
@@ -267,7 +267,7 @@ public:
     return pair_iter<Iter1, Iter2>(iter1-n, iter2-n);
   }
   
-  difference_type operator-(pair_iter<Iter1, Iter2> a)
+  difference_type operator-(pair_iter<Iter1, Iter2> a) const
   {
     //cout << "operator-2" << endl;
     return iter1-a.iter1;
