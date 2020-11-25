@@ -193,15 +193,6 @@ public:
     return value_type(iter1, iter2);
     //return *iter1;
   };
-  value_type& operator[](int n)
-  {
-    //cout << "operator[]" << endl;
-    Mypair<Iter1, Iter2> ref_pair;
-    ref_pair.first=iter1+n;
-    ref_pair.second=iter2+n;
-    return ref_pair;
-    //return *iter1;
-  }
   //---------------------------------------
   //Increment and Decrement Operators
   //---------------------------------------
